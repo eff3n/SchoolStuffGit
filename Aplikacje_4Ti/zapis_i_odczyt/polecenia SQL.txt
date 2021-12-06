@@ -1,0 +1,173 @@
+Plik jest skonstruowany w następujący sposób:
+- Składnia polecenia 
+- Przykłady:
+-- Treść polecenia
+-- POLECENIE sql ZAKOŃCZONE średnikiem;
+-- # Wyjaśnienie elementów użytych w poleceniu
+
+
+Dla ułatwienia zrozumienia słowa będące poleceniami języka SQL są pisane dużymi literami a parametry czy nazwy danych małymi.
+
+===========================================
+===========================================
+===========================================
+
+==========
+= SELECT =
+==========
+
+Składnia:
+SELECT kolumny FROM tabela opcionalne_parametry_polecenia;
+
+Przykłady:
+
+Wyświetl tabelę użytkownicy.
+SELECT * FROM uzytkownicy;
+# Gwiazdka (*) oznacza wszystko
+
+Wyświetl tylko imiona i nazwiska użytkowników.
+SELECT imie,nazwisko FROM uzytkownicy;
+
+Wyświetl użytkowników z polski.
+SELECT * FROM uzytkownicy WHERE kraj="polska";
+# Polecenie WHERE pozwala ustalić warunek 
+
+========= NOT,OR,AND
+
+Wyświetl użytkowników którzy nie są z polski
+SELECT * FROM uzytkownicy WHERE NOT kraj="polska";
+# Polecenie NOT jest negacją, pozwala zaprzeczyć
+# To samo można zrobić bez polecenia NOT: SELECT * FROM uzytkownicy WHERE kraj<>"polska";
+
+Wyświetl użytkowników z polski lub francji.
+SELECT * FROM uzytkownicy WHERE kraj="polska" OR kraj="francja";
+# Polecenie OR jest dosłownie tłumaczone: Lub
+
+Wyświetl użytkowników z polski mających więcej niż 25 lat.
+SELECT * FROM uzytkownicy WHERE kraj="polska" AND wiek>25;
+# Polecenie AND jest dosłownie tłumaczone: i
+
+========= BETWEEN
+
+Wyświetl imiona użytkowników w wieku od 18 do 25 lat
+SELECT imie FROM uzytkownicy WHERE wiek BETWEEN 18 AND 25;
+# Polecenie BETWEEN pozwala wybrać zakres od-do (włącznie z podanymi liczbami)
+
+========= IN, IN (SELECT)
+
+Wyświetl wszystkich użytkowników mających na imię Jacek, Weronika, Henryk, Wacek lub Julia
+SELECT * FROM uzytkownicy WHERE imie IN ("Jacek", "Weronika", "Henryk", "Wacek", "Julia");
+# Polecenie IN pozwala w nawiasie zapisać wszystkie wartości jakie chcemy sprawdzić
+
+Wyświetl wszystkich użytkowników których email jest w tabeli subskrypcje
+SELECT * FROM uzytkownicy WHERE email IN ( SELECT email FROM subskrypcje );
+# Polecenie IN pozwala w nawiasie zapisać inne polecenie SELECT by porównać z danymi z innej tabeli 
+
+========== ORDER BY
+
+Wyświetl użytkowników posortowanych według daty urodzenia
+SELECT * FROM uzytkownicy ORDER BY data_ur;
+# Polecenie ORDER BY pozwala posortować wyniki zapytania według podanej kolumny
+
+Wyświetl użytkowników od najstarszego do najmłodszego
+SELECT * FROM uzytkownicy ORDER BY wiek DESC;
+# Polecenie DESC określa sortowanie od największych do najmniejszych wartości
+# Polecenie ASC działa odwrotnie do DESC (ASC jest domyślne)
+
+Wyświetl użytkowników posortowanych według kraju pochodzenia a następnie według wieku (od najstarszych)
+SELECT * FROM uzytkownicy ORDER BY kraj ASC, wiek DESC;
+# Polecenie ORDER BY pozwala podać kilka kolumn do sortowania.
+
+=========== COUNT
+
+Wyświetl ilość użytkowników;
+SELECT COUNT(id) FROM uzytkownicy;
+# Polecenie COUNT liczy ilość wystąpień wartości (id jest przypisane do każdego użytkownika)
+# W nawiasie od COUNT można podać dowolną kolumnę w której każdy z użytkowników ma wpisaną wartość np. imie
+
+Wyświetl ilość użytkowników z polski
+SELECT COUNT(id) FROM uzytkownicy WHERE kraj="polska";
+
+Wyświetl ilość użytkowników z każdym z krajów
+SELECT kraj,COUNT(id) FROM uzytkownicy GROUP BY kraj;
+# Polecenie GROUP BY pozwala grupować wyniki zapytania (kolumna która jest wybrana w GROUP BY powinna być wybrana w SELECT)
+
+============ AVG
+
+Wyświetl średnią wieku użytkowników.
+SELECT AVG(wiek) FROM uzytkownicy;
+# Polecenie AVG liczy średnią z wartości w podanej kolumnie
+
+============ SUM
+
+Wyświetl sumę wszystkich produktów o statusie "zamowione"
+SELECT SUM(ilosc) FROM produkty WHERE status="zamowione";
+# Polecenie SUM sumuje wartości w podanej kolumnie
+
+============ LIKE
+
+Wyświetl imiona użytkowników których imiona zaczynają się od "A"
+SELECT imie FROM uzytkownicy WHERE imie LIKE "A%";
+# Polecenie LIKE pozwala określać tak zwane paterny wyszukiwania tekstu, więcej na: https://www.w3schools.com/sql/sql_like.asp
+# "A%" Zaczynające się od A
+# "%A" Kończące się na A
+# "%A%" Zawierające A w środku
+# "A%B" Zaczynające się od A i kończące na B
+# "_A%" Zawierające A jako drugą literę
+
+
+==========
+= UPDATE =
+==========
+
+Składnia:
+UPDATE tabela SET kolumna=wartosc WHERE warunek;
+
+Przykłady:
+
+Zmień kraj na Polskę użytkownikowi o id 5.
+UPDATE uzytkownicy SET kraj="polska" WHERE id=5;
+
+Zmień ilość lat użytkownika Jan Kowalski na 32.
+UPDATE uzytkownicy SET wiek=32 WHERE imie="Jan" AND nazwisko="Kowalski";
+
+Zmień kraj na polskę a miasto na kraków użytkownikom o id 1,5 i 10.
+UPDATE uzytkownicy SET kraj="polska", miasto="krakow" WHERE id=1 OR id=5 OR id=10;
+# W poleceniu SET można ustawić kilka wartości po przecinku
+
+Zwiększ wiek wszystkich użytkowników o jeden
+UPDATE uzytkownicy SET wiek=wiek+1 WHERE 1=1;
+# Warunek 1=1 jest zawsze prawdziwy a więc dla wszystkich użytkowników
+
+
+==========
+= DELETE =
+==========
+
+Skłania:
+DELETE FROM tabela WHERE warunek;
+
+Przykłady:
+
+Usuń wszystkich użytkowników mających poniżej 18 lat.
+DELETE FROM uzytkownicy WHERE wiek<18;
+
+
+===============
+= INSERT INTO =
+===============
+
+Składnia:
+INSERT INTO tabela(kolumny) VALUES (wartosci);
+
+Nie uzupełnione kolumny będą miały wartości domyślne (najczęściej puste pole), dla id najczęściej jest to automatyczna inkrementacja.
+
+Przykłady:
+Dodaj użytkownika o imieniu Tomek i nazwisku Malinowski mającego 20 lat.
+INSERT INTO uzytkownicy(imie, nazwisko, wiek) VALUES ("Tomek", "Malinowski", 20);
+# Wartości podajemy w takiej samej kolejności w jakiej podaliśmy nazwy kolumn
+
+Dodaj użytkowników Jacek Herowski, Małgorzata Ruchalska i Angelika Urbańska, wszyscy w wieku 25 lat.
+INSERT INTO uzytkownicy(imie, nazwisko, wiek) VALUES ("Jacek", "Herowski", 25), ("Małgorzata", "Ruchalska", 25), ("Angelika", "Urbańska", 25);
+# Można dodać wiele wierszy oddzielając kolejne nawiasy przecinkiem 
+
