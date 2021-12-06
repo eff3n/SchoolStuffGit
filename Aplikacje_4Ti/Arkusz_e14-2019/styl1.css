@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Helvetica;
+}
+#mainleft {
+    background-color: navy;
+    color: white;
+    width: 25%;
+    height: 700px;
+    float: left;
+}
+#righttop{
+    background-color: royalblue;
+    width: 75%;
+    float: right;
+    height: 100px;
+    text-align: center;
+}
+#rightmiddle{
+    background-color: steelblue;
+    width: 75%;
+    height: 300px;
+    float: right;
+}
+#rightbottom{
+    background-color: royalblue;
+    width: 75%;
+    float: right;
+    height: 300px;
+    text-align: center;
+}
+footer {
+    background-color: steelblue;
+    text-align: center;
+    padding: 20px;
+}
+form {
+    margin: 30px;
+    line-height: 3;
+}
+form:hover{
+    background-color: deepskyblue;
+}
+h1 {
+    letter-spacing: 5px;
+}
