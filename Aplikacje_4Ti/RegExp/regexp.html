@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        function check(){
+            var string = document.getElementById("string").value;
+            var email = document.getElementById("email").value;
+            let check = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{3}$');
+            let checkmail = new RegExp('^[a-z A-Z 0-9]{2,}@[a-z A-Z 0-9]{2,}.[a-z A-Z]{2,}$')
+            if(check.test(string)==true) {
+                document.getElementById("result").innerHTML = "Poprawnie"
+            } else document.getElementById("result").innerHTML = "Błędnie"
+            if(checkmail.test(email)==true) {
+                document.getElementById("result1").innerHTML = "Poprawnie"
+            } else document.getElementById("result1").innerHTML = "Błędnie"
+        }
+    </script>
+</head>
+<body>
+    Wpisz numer telefonu: <input type="text" id="string"> <br />
+    Wpisz adres email: <input type="text" id="email">
+    <button type="submit" onclick="check()"> SPRAWDZ </button>
+    <p id="result"></p><p id="result1"></p>
+</body>
