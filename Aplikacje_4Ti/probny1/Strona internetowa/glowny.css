@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: red;
+    background-color: rgb(100, 100, 100);
+    font-size: 105%;
+}
+a {
+    color: red;
+}
+#banner {
+    width: 50%;
+    height: 130px;
+    display: flex;
+    margin-left: 80px;
+    padding: 15px;
+    background-color: rgb(50, 50, 50);
+}
+#bannersection {
+    height: 160px;
+    background-color: rgb(50, 50, 50);
+}
+div {
+    float: left;
+}
+#links {
+    width: 20%;
+}
+#image {
+    width: 75%;
+    height: 500px;
+    margin-right: 5%;
+    background-image: linear-gradient(90deg, black, white, black)
+}
+#textsection {
+    padding: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+#Einstein {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    display:flex; 
+}
+#time {
+    float: right;
+    text-align: right;
+    margin-right: 60px;
+    width: 400px;
+}
+table, td ,tr {
+    border-collapse: collapse;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(100, 100, 100); 
+    text-align: center;
+    margin: 0 auto;
+}
+td {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+table {
+    margin-top: 125px;
+}
+#members {
+    text-align: center;
+    background-color: transparent;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-left: 45%;
+}
+#pasek {
+    animation: slide 13s infinite ;
+    float:left;
+    width: 90%;
+    vertical-align: middle;
+}
+@keyframes slide {
+    from {transform: translateX(-20%);}
+    to {transform: translateX(110%);}
+}

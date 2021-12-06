@@ -1,0 +1,1 @@
+﻿select avg(placa) as "sr wynagrodzenie" from pracownicy;

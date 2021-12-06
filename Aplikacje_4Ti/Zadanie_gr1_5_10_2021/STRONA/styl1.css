@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+table, tr , td {
+    border: 1px brown dotted;
+}
+table, td {
+    margin: 10px;
+}
+table {
+    width: 500px;
+}
+td {
+    height: 20px;
+    width: 20%;
+    text-align: center;
+}
+#banner {
+    background-color: #40271A;
+    color: white;
+    font-family: Tahoma;
+    height: 80px;
+    text-align: center;
+}
+#left {
+    float:left;
+    background-color: #DBB29C;
+    width: 40%;
+    height: 700px;
+}
+#right {
+    float: left;
+    width: 60%;
+    height: 700px;
+    background-color: #FFE3D4;
+}
+#footer {
+    background-color: #40271A;
+    text-align: right;
+    color: white;
+}
+img {
+    padding: 30px;
+}
+ol {
+    list-style: upper-roman;
+    margin-left: 30px;
+}

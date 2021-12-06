@@ -1,0 +1,1 @@
+﻿create table tab17 (id int, imie varchar(20), nazwisko varchar(20), index ind_id (id), index ind_imie (imie), index ind_nazwisko (nazwisko));

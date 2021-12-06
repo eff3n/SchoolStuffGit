@@ -1,0 +1,1 @@
+﻿grant select (imie, nazwisko) on table pracownicy to uczen2 with grant option;

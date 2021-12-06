@@ -1,0 +1,1 @@
+﻿insert into osoby2 (id, imie, nazwisko, pesel) values (default, 'Marek6', 'Klon6', '78945612396'), (default, 'Marek7', 'Klon7', '78945612396'), (default, 'Marek8', 'Klon8', '78945612396');

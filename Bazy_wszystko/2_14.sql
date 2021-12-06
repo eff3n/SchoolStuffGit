@@ -1,0 +1,1 @@
+﻿create index index1 on ind (id, imie);

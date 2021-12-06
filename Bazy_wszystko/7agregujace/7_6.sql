@@ -1,0 +1,1 @@
+﻿select max(placa) as "max wynagrodzenie" from pracownicy;

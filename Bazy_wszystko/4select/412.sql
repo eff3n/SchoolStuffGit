@@ -1,0 +1,1 @@
+﻿select * from pracownicy where id in(3, 5, 7);

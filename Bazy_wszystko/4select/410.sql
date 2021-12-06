@@ -1,0 +1,1 @@
+﻿select * from pracownicy where placa between 1400 and 1600 order by placa;

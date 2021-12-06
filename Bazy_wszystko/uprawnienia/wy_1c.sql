@@ -1,0 +1,1 @@
+﻿show grants for komp1;

@@ -1,0 +1,1 @@
+﻿create table osoby (id int, imie varchar(20), nazwisko varchar(20));

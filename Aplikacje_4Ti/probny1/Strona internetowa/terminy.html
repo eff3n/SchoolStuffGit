@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="glowny.css" />
+    <script>
+        function czas(){
+    document.getElementById("czas").innerHTML = document.lastModified;
+    }
+    </script>
+</head>
+<body onload="czas()">
+    <h1 id="bannersection">
+        <img id="banner" src="../Ćwiczenia-EE09-28-09-2021/fizyka/grafiki/baner.jpg" alt="nie dziala" />
+    </h1>
+    <div id="textsection">
+        <div id="pasek">strona internetowa koła fizycznego</div>
+    </div>
+    <section id="linkssection">
+        <div id="links">
+        <ul>
+            <li><a href="../Strona internetowa/index.html">Strona główna</a></li>
+            <li><a href="../Strona internetowa/terminy.html">Terminy spotkań</a></li>
+            <li><a href="mailto:fizyk@wp.pl">Kontakt</a></li>
+        </ul>
+        </div>
+        <div id="image">
+            <table>
+                <tr style="font-weight: bold;">
+                    <td>Rok szkolny</td>
+                    <td>Miesiąc</td>
+                    <td>Dzień</td>
+                    <td>Godzina</td>
+                    <td>Sala</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">2013-2014</td>
+                    <td>Wrzesień-styczeń</td>
+                    <td>Poniedziałek</td>
+                    <td>8:00</td>
+                    <td rowspan="2">212</td>
+                </tr>
+                <tr>
+               
+                    <td>Luty-czerwiec</td>
+                    <td>Środa</td>
+                    <td>14:20</td>
+                    
+                </tr>
+            </table>
+            <a id="members" href="../uczestnicy.html">Aktualni uczestnicy</a>
+        </div>
+    </section>
+    <div id="time">Ostatnia aktualizacja:<output id="czas"></output></div>
+</body>
+</html>

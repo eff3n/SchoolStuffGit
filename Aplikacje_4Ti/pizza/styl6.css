@@ -1,0 +1,76 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.plakat {
+	width: 100%;
+	background: #4E885C;
+	text-align: center;
+	color: orange;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.logo {
+	height: 100px;
+}
+.logo1 {
+	float: right;
+}
+
+.content {
+	display: flex;
+}
+
+.content div {
+	flex: 33%;
+}
+
+.lewa{
+	background-color: #72A37D;
+    width: 30%;
+    height: 300px;
+}
+.prawa{
+	background-color: #72A37D;
+    text-align: center;
+    width: 30%;
+    height: 300px;
+
+}
+.srodek {
+	background-color: #A2C3A9;
+    width: 40%;
+    height: 300px;
+}
+
+.prawa p {
+	white-space: pre-line;
+}
+
+#pobierz_oferte{
+	background: orange;
+	padding: 15px;
+	color: green;
+	text-decoration: underline;
+	border: 0;
+}
+.order h3, .order form {
+	text-align: center;
+	margin: 0;
+}
+
+.order {
+	margin: 0 auto;
+	padding: 100px 0;
+	width: 100%;
+	background: rgb(162,195,169);
+}
+
+
+.stopka {
+	color: orange;
+	background: rgb(78,136,92);
+	width: 100%;
+}

@@ -1,0 +1,1 @@
+create table tab24 (id integer, wartosc decimal(6,3)); 

@@ -1,0 +1,1 @@
+create table tab29 (id integer, imie varchar(30), nazwisko varchar(40) not null); 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wyremontuj mieszkanie</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="remont.css">
+</head>
+<body>
+	<header>
+        <img src="logo.png">
+    </header>
+	<nav>
+		<div><a href="index.html">O NAS</a></div>
+		<div><a href="kontakt.html">KONTAKT</a></div>
+		<div><a href="kalkulator.html">KALKULATOR</a></div>
+		<div><a href="http://www.jakremontowac.pl/" target="_blank">POLECANE STRONY</a></div>
+	</nav>
+	<section>
+		<h1>Malowanie pokoju: 8 zł za m2</h1>
+		<p>Wymiary pokoju w metrach<input type="number" name="width" id="x"><input type="number" name="length" id="y"></p>
+		<script type="text/javascript" src="script.js"></script>
+		<button onclick="CalcSurf()">OBLICZ KOSZT</button>
+		<p id="surface"></p>
+		<p id="cost"></p>
+	</section>
+	<footer>Autor strony: Michał Surówka</footer>
+</body>
+</html>

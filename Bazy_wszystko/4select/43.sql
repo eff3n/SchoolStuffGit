@@ -1,0 +1,1 @@
+﻿select imie, nazwisko, stanowisko, placa as wynagrodzenie from pracownicy;

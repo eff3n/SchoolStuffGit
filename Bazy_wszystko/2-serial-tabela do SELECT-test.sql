@@ -1,0 +1,2 @@
+﻿create table pracownicy2 (id serial primary key, imie varchar(20) not null, nazwisko varchar(30) not null, 
+                          placa decimal(7,2) not null, stanowisko varchar(11), pesel char(11));

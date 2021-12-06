@@ -1,0 +1,1 @@
+﻿select imie, nazwisko, nazwa, placa from pracownicy, stanowiska where pracownicy.stanowisko_id = stanowiska.id order by nazwisko asc;

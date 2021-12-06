@@ -1,0 +1,1 @@
+﻿create index indeks1 on tabela2 (id, imie, nazwisko);

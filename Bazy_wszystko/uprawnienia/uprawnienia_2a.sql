@@ -1,0 +1,1 @@
+﻿grant select on table pracownicy to konto1;

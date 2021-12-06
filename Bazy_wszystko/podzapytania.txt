@@ -1,0 +1,59 @@
+Znajdź temperaturę o wartości wyższej niż średnia w danej miejscowości.
+---------------------------------------------------------------------------------
+SELECT
+		prognoza.Lokalizacja_id,
+		lokalizacja.Nazwa,
+		pogoda.temperatura
+        
+FROM
+		lokalizacja INNER JOIN prognoza
+		ON lokalizacja.id=prognoza.Lokalizacja_id
+		INNER JOIN pogoda
+		ON pogoda.id=prognoza.Pogoda_id
+WHERE
+		pogoda.temperatura > (SELECT AVG(pogoda.temperatura) AS sr_temp FROM pogoda INNER JOIN prognoza AS prognoza2
+                                                        ON pogoda.id = prognoza2.Pogoda_id 
+                              WHERE prognoza.Lokalizacja_id=prognoza2.Lokalizacja_id);
+
+
+
+------------------------------------------------------------------------------------------------------
+SELECT
+		prognoza.Lokalizacja_id,
+		lokalizacja.Nazwa,
+		pogoda.temperatura,
+        tab_srtemp.sr_temp
+FROM
+		lokalizacja INNER JOIN prognoza
+		ON lokalizacja.id=prognoza.Lokalizacja_id
+		INNER JOIN pogoda
+		ON pogoda.id=prognoza.Pogoda_id
+        INNER JOIN (SELECT prognoza2.Lokalizacja_id, AVG(pogoda.temperatura) AS sr_temp FROM pogoda, prognoza AS prognoza2
+                                                        WHERE pogoda.id = prognoza2.Pogoda_id 
+                    									GROUP BY prognoza2.Lokalizacja_id) AS tab_srtemp
+        ON tab_srtemp.Lokalizacja_id = prognoza.Lokalizacja_id
+                                          
+                    
+WHERE 
+		pogoda.temperatura > tab_srtemp.sr_temp
+--------------------------------------------------------------------
+
+
+SELECT lokalizacja.Nazwa, pogoda.temperatura, prognoza.id 
+FROM lokalizacja INNER JOIN prognoza 
+	ON lokalizacja.id=prognoza.Lokalizacja_id 
+INNER JOIN pogoda 
+	ON pogoda.id=prognoza.Pogoda_id 
+WHERE pogoda.temperatura > (SELECT AVG(pogoda.temperatura) as srednia FROM pogoda INNER JOIN prognoza as drugi ON pogoda.id=drugi.Pogoda_id WHERE prognoza.Lokalizacja_id=drugi.Lokalizacja_id);
+
+
+SELECT prognoza.id, pogoda.temperatura, lokalizacja.Nazwa, srednia.sredniatemp
+	FROM prognoza INNER JOIN pogoda
+    	ON prognoza.Pogoda_id=pogoda.id
+	INNER JOIN lokalizacja
+    	ON lokalizacja.id=prognoza.Lokalizacja_id
+	INNER JOIN
+    	(SELECT AVG(pogoda.temperatura) AS sredniatemp, srednia.Lokalizacja_id FROM pogoda, prognoza as srednia WHERE pogoda.id=srednia.Pogoda_id
+         	GROUP BY srednia.Lokalizacja_id) AS srednia
+		ON srednia.Lokalizacja_id=prognoza.Lokalizacja_id
+	WHERE pogoda.temperatura > srednia.sredniatemp;

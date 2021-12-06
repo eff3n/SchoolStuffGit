@@ -1,0 +1,1 @@
+﻿create view pracownicy_widok as select * from pracownicy where placa > 1600;

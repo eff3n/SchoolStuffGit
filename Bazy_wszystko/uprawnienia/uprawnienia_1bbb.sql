@@ -1,0 +1,1 @@
+﻿grant all privileges on *.* to 'roott'@'localhost' identified by 'baza1';

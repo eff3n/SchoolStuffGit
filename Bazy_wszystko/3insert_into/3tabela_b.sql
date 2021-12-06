@@ -1,0 +1,1 @@
+﻿create table osoby2 (id serial primary key not null, imie varchar(20) not null, nazwisko varchar(30) not null, pesel char(11));

@@ -1,0 +1,1 @@
+﻿grant select on table pracownicy to uczen2 with grant option;

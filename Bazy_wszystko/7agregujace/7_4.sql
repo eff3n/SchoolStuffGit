@@ -1,0 +1,1 @@
+﻿select count(*) as "lista sprzedawcow" from pracownicy where stanowisko_id = 3;

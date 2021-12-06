@@ -1,0 +1,1 @@
+﻿select * from pracownicy where id >= 3 and id <=6;

@@ -1,0 +1,1 @@
+﻿create table osoby (id integer primary key not null, imie varchar(20) not null, nazwisko varchar(30) not null, pesel char(11));

@@ -1,0 +1,38 @@
+#leftsection {
+    width: 40%;
+    height: 600px;
+    background-color: #ff8989;
+    float: left;
+}
+#rightsection {
+    width: 60%;
+    height: 600px;
+    background-color: #7872D9;
+    float: left;
+}
+footer {
+    background-color: black;
+    color: white;
+    font-size: 150%;
+    text-align: right;
+    clear: both;
+}
+table, td {
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid brown;
+}
+button {
+   margin: 10px;
+   border: 2px solid blue;
+   font-size: 20px;
+   padding: 10px; 
+   background-color: cyan;
+}
+h1 {
+    text-align: center;
+}
+img {
+    width: 100px;
+    height: 100px;
+}

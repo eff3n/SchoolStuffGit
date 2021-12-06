@@ -1,0 +1,1 @@
+﻿alter table osoby rename to osoba;

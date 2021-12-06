@@ -1,0 +1,1 @@
+﻿alter table kategorie change column id kategoria_id integer;

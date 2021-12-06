@@ -1,0 +1,1 @@
+﻿delete from pracownicy where id between 4 and 8;

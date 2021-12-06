@@ -1,0 +1,1 @@
+create table uczen1 . prosta_tab_b (id integer, nazwa varchar(30)); 

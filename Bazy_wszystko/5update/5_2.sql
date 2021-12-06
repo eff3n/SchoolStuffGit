@@ -1,0 +1,1 @@
+﻿update pracownicy set pesel='99999999999' where id=7;

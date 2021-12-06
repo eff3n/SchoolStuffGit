@@ -1,0 +1,1 @@
+create table tab23 (id integer, wartosc double precision); 

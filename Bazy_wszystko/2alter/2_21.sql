@@ -1,0 +1,1 @@
+﻿alter table osoby drop constraint pk;

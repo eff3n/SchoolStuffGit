@@ -1,0 +1,1 @@
+﻿update pracownicy set pesel='nieznany' where pesel is null;

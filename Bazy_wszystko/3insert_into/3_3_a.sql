@@ -1,0 +1,1 @@
+﻿insert into osoby values (3, 'Franek2', 'Jodła2', null);

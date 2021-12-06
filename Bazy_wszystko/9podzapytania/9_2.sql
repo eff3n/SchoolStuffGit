@@ -1,0 +1,1 @@
+﻿select towar_id from zamowienia where wartosc = (select min(wartosc) from zamowienia);

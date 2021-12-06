@@ -1,0 +1,1 @@
+﻿alter table pracownicy drop foreign key stanowiska_fk;

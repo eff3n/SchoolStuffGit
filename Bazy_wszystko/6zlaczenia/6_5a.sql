@@ -1,0 +1,1 @@
+﻿select imie, nazwisko, nazwa, placa from pracownicy, stanowiska;

@@ -1,0 +1,1 @@
+﻿select * from pracownicy cross join stanowiska;

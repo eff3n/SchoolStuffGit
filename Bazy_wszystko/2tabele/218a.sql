@@ -1,0 +1,1 @@
+﻿create table tab18a (id int primary key, imie varchar(20) not null, nazwisko varchar(20) not null, index ind_kilka (id, imie, nazwisko));

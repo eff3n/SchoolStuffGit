@@ -1,0 +1,1 @@
+﻿select sum(placa) as "suma" from pracownicy;

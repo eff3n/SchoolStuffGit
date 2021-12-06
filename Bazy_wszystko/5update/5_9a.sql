@@ -1,0 +1,1 @@
+﻿delete from pracownicy where id in (1, 3, 7);

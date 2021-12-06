@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="glowny.css" />
+    <script>
+        function czas(){
+    document.getElementById("czas").innerHTML = document.lastModified;
+    }
+    </script>
+</head>
+<body onload="czas()">
+    <h1 id="bannersection">
+        <img id="banner" src="../Ćwiczenia-EE09-28-09-2021/fizyka/grafiki/baner.jpg" alt="nie dziala" />
+    </h1>
+    <div id="textsection">
+            <div id="pasek">strona internetowa koła fizycznego</div>
+    </div>
+    <section id="linkssection">
+        <div id="links">
+        <ul>
+            <li><a href="../Strona internetowa/index.html">Strona główna</a></li>
+            <li><a href="../Strona internetowa/terminy.html">Terminy spotkań</a></li>
+            <li><a href="mailto:fizyk@wp.pl">Kontakt</a></li>
+        </ul>
+        </div>
+        <div id="image">
+            <img id="Einstein" src="../Ćwiczenia-EE09-28-09-2021/fizyka/grafiki/zdjecie.jpg" />
+        </div>
+    </section>
+    <p id="time" >Ostatnia aktualizacja: <output id="czas"></output> </p>
+</body>
+</html>

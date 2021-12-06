@@ -1,0 +1,1 @@
+﻿delete from pracownicy where id=5;

@@ -1,0 +1,1 @@
+create table tab212 (id integer primary key auto_increment, imie varchar(30), nazwisko varchar(40)); 

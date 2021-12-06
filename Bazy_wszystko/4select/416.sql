@@ -1,0 +1,1 @@
+﻿select distinct nazwisko from pracownicy order by nazwisko;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Pizzeria Margherita</title>
+	<link rel="stylesheet" href="styl6.css" />
+	
+</head>
+<body>
+		<div class="plakat">
+			Najlepsza pizza w miescie <img class="logo" alt="logo" src="logo.png" />
+		</div>
+			<div class="content">
+				<div class="lewa">
+					<p>U nas zamówisz pizzę z dowozem</p>
+				<a href="logo.png" alt="">Nasze logo</a>
+			
+				</div>
+					<div class="srodek">
+						<h3>Pizzeria Margherita</h3>
+						<p>ul. Botaniczna 4, Zielona Góra</p>
+						<img class="logo1" alt="logo" src="logo.png" />
+					</div>
+				<div class="prawa">
+					<h3>Oferta</h3>
+					<p>
+						1. Pizza
+						2. Lasagne
+						3. Sałataki
+					</p>
+						<a href="Oferta.txt"><button id="pobierz_oferte">Pobierz pełną ofertę</button></a>
+				</div>
+			</div>
+			<div class="order">
+				<h3> Oblicz koszt dostawy </h3>
+					
+			<label for="zielona" > <input id="zielona" type="checkbox" name="zielona" /> Jestem z zielonej góry </label>
+			<div> albo </div>
+			<label for="odleglosc"> Podaj liczbę kilometrów od Zielonej góry <input id="odleglosc" type="number" name="odleglosc" /></label>
+			<br />
+			
+			<input type="button" value="Oblicz" onclick="licz()"></button>
+			<p id="wynik"></p>
+			<script>
+				function licz() {
+					const kilometry = document.getElementById("odleglosc").value*2;
+					if(document.getElementById("zielona").checked == true){
+						document.getElementById("wynik").innerHTML = "Dowieziemy twoją pizzę za darmo!";
+						console.log("wynik");
+					}
+					else if(document.getElementById("zielona").checked == false){
+						document.getElementById("wynik").innerHTML = "Dowóz będzie Cię kosztował: "+kilometry+" złotych";
+					}
+				}
+			</script>
+			
+		</div>
+	<div class="stopka">
+		Strone internetową opracował <strong>Dawid Preisner</strong>
+	</div>
+</body>
+</html>
+

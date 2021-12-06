@@ -1,0 +1,29 @@
+zad1 a
+
+SELECT lokalizacja.Nazwa, lokalizacja.Adres, pogoda.temperatura, pogoda.Cisnienie,
+prognoza.dataProg, prognoza.godzina
+
+FROM lokalizacja, pogoda, prognoza
+
+WHERE lokalizacja.id=prognoza.Lokalizacja_id AND pogoda.id=prognoza.Pogoda_id;
+
+zad1 b
+
+SELECT lokalizacja.Nazwa, lokalizacja.Adres, pogoda.temperatura, pogoda.Cisnienie, prognoza.dataProg, prognoza.godzina
+
+FROM lokalizacja INNER JOIN prognoza ON lokalizacja.id=prognoza.Lokalizacja_id INNER JOIN pogoda ON pogoda.id=prognoza.Pogoda_id;
+
+zad2 a
+SELECT lokalizacja.Nazwa, lokalizacja.Adres, pogoda.Wilgotnosc, prognoza.dataProg, prognoza.godzina
+
+FROM lokalizacja, pogoda, prognoza
+
+WHERE lokalizacja.id=prognoza.Lokalizacja_id AND pogoda.id=prognoza.Pogoda_id AND pogoda.Wilgotnosc > '30'
+ORDER BY lokalizacja.Nazwa ASC;
+
+zad2 b
+SELECT lokalizacja.Nazwa, lokalizacja.Adres, pogoda.Wilgotnosc, prognoza.dataProg, prognoza.godzina
+
+FROM lokalizacja INNER JOIN prognoza ON lokalizacja.id=prognoza.Lokalizacja_id INNER JOIN pogoda ON pogoda.id=prognoza.Pogoda_id 
+
+WHERE pogoda.Wilgotnosc > '30';

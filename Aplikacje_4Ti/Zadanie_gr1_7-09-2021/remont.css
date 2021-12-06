@@ -1,0 +1,63 @@
+header{
+	background: rgb(255,213,162);
+	text-align: center;
+	padding: 20px;
+}
+nav div{
+	background: rgb(191,112,17);
+	color: white;
+	text-align: center;
+	font-size: 150%;
+	width: 25%;
+	float: left;
+}
+section{
+	height: 400px;
+}
+footer{
+	background: rgb(191,112,17);
+	color: white;
+	text-align: right;
+	font-size: 150%;
+}
+a{
+	color: white;
+}
+button{
+	background: brown;
+	border: solid 2px brown;
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+}header{
+	background: rgb(255,213,162);
+	text-align: center;
+	padding: 20px;
+}
+nav div{
+	background: rgb(191,112,17);
+	color: white;
+	text-align: center;
+	font-size: 150%;
+	width: 25%;
+	float: left;
+}
+section{
+	height: 400px;
+}
+footer{
+	background: rgb(191,112,17);
+	color: white;
+	text-align: right;
+	font-size: 150%;
+}
+a{
+	color: white;
+}
+button{
+	background: brown;
+	border: solid 2px brown;
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+}

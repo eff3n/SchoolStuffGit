@@ -1,0 +1,1 @@
+﻿grant all on baza_komp33.* to 'komp33'@'localhost' identified by 'baza1';

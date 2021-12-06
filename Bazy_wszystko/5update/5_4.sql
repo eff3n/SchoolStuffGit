@@ -1,0 +1,1 @@
+﻿update pracownicy set stanowisko='doradca-kl' where stanowisko='sprzedawca';

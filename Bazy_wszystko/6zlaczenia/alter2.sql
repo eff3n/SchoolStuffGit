@@ -1,0 +1,1 @@
+﻿alter table kategorie change column nazwa nazwa_kategorii varchar(50);

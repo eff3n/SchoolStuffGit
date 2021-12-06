@@ -1,0 +1,1 @@
+﻿select imie, nazwisko, nazwa, placa from pracownicy full outer join stanowiska on pracownicy.stanowisko_id = stanowiska.id;

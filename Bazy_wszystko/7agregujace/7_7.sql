@@ -1,0 +1,1 @@
+﻿select min(placa) as "min wynagrodzenie" from pracownicy;

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formatowanie</title>
+    <meta charset="UTF-8 "/>
+    <link rel="stylesheet" href="styl2.css" />
+    <script>  
+        function red() {
+            document.getElementById("ToChange").style.color = "red";
+            const percentage = document.getElementById("percentage").value;
+            document.getElementById("ToChange").style.fontSize = percentage + "%";
+            const style = document.querySelector("#opcja").value;
+            document.getElementById("ToChange").style.fontStyle = style;
+        }
+        function green() {
+            document.getElementById("ToChange").style.color = "green";
+            const percentage = document.getElementById("percentage").value;
+            document.getElementById("ToChange").style.fontSize = percentage + "%";
+            const style = document.querySelector("#opcja").value;
+            document.getElementById("ToChange").style.fontStyle = style;
+        }
+        function blue() {
+            document.getElementById("ToChange").style.color = "blue";
+            const percentage = document.getElementById("percentage").value;
+            document.getElementById("ToChange").style.fontSize = percentage + "%";
+            const style = document.querySelector("#opcja").value;
+            document.getElementById("ToChange").style.fontStyle = style;
+        }
+    </script>
+</head>
+<body>
+    <section id="banner">
+        <h1>Formatowanie dokumentów HTML</h1>
+    </section>
+    <section>
+        <div class="main1">
+            <h2>Przykłady listy - hobby</h2> <br />
+            <ul>
+                <li>muzyka</li>
+                <li>turystyka</li>
+                    <ol>
+                        <li>góry</li>
+                        <li>jeziora</li>
+                        <li>na rowerze</li>
+                    </ol>
+                <li>książki</li>
+            </ul>
+        </div>
+        <div class="main1">
+            <h2>Przykład tabeli - rozkład dnia</h2> <br />
+            <table>
+                <tr>
+                    <td><b>Pora dnia</b></td>
+                    <td><b>obowiązki</b></td>
+                </tr>
+                <tr>
+                    <td>rano</td>
+                    <td>nauka</td>
+                </tr>
+                <tr>
+                    <td>południe</td>
+                    <td>zajęcia dodatkowe</td>
+                </tr>
+                <tr>
+                    <td>popołudnie</td>
+                    <td rowspan="2">moje hobby</td>
+                </tr>
+                <tr>
+                    <td>wieczór</td>
+                </tr>
+            </table>
+        </div>
+        <div class="main2">
+            <img src="tekst.png" alt="technologia web" />
+        </div>
+    </section>
+    <section id="something">
+        Podaj rozmiar tekstu w procentach <input type="number" min="1" id="percentage" />% <br />
+        <select id="opcja">
+            <option value="normal">prosty</option>
+            <option value="italic">pochyły</option>
+        </select> <br />
+        Jakim kolorem sformatować tekst? <br />
+        <button id="red" style="background-color: red; color: red" onclick="red()">..</button>
+        <button id="green" style="background-color: green; color: green" onclick="green()">..</button>
+        <button id="blue" style="background-color: blue; color: blue" onclick="blue()">..</button>
+        <p id="ToChange">To jest przykład paragrafu, który może być dowolnie modyikowany przez JavaScript</p>
+    </section>
+    <footer>Formatowaniem tekstu zajmował się: Michał Surówka <br /> <a href="formatowanie.pl" target="_blank">Odwiedź także</a></footer>
+</body>
+</html>

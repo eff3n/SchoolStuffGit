@@ -1,0 +1,1 @@
+create table tab25 (id integer, dataiczas timestamp); 

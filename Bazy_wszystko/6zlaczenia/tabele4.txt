@@ -1,0 +1,52 @@
+drop database zlaczenie4;
+
+create database zlaczenie4;
+
+use zlaczenie4;
+
+create table osoby
+(lp integer primary key AUTO_INCREMENT not null,
+	imie varchar(50),
+	nazwisko varchar(50),
+	id_klasa int);
+
+insert into osoby (lp, imie, nazwisko, id_klasa) 
+values 
+(1, 'imie1', 'nazwisko1', '1'), 
+
+(2, 'imie2', 'nazwisko2', '3'),
+
+(3, 'imie3', 'nazwisko3', '2');
+
+select * from osoby;
+
+create table dane
+(nr integer primary key AUTO_INCREMENT not null,
+	kraj varchar(50),
+	miasto varchar(50),
+	pesel char(11),
+	id_osoby int);
+
+insert into dane (nr, kraj, miasto, pesel, id_osoby) 
+values 
+(1, 'kraj1', 'miasto1', '12345678901', '3'), 
+
+(2, 'kraj2', 'miasto2', '12345678902', '2'),
+
+(3, 'kraj3', 'miasto3', '12345678903', '1');
+
+select * from dane;
+
+create table klasa
+(nr integer primary key AUTO_INCREMENT not null,
+	klasa varchar(50));
+
+insert into klasa (nr, klasa) 
+values 
+(1, 'klasa1a'), 
+
+(2, 'klasa2b'),
+
+(3, 'klasa3c');
+
+select * from klasa;

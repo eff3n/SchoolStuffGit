@@ -1,0 +1,1 @@
+﻿alter table osoby add constraint pk primary key (id);

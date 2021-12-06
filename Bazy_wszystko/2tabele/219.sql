@@ -1,0 +1,1 @@
+﻿drop index ind_id on tab17;

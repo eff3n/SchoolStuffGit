@@ -1,0 +1,1 @@
+﻿alter table osoby rename column id to osobaid;

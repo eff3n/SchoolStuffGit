@@ -1,0 +1,1 @@
+﻿create table osoby3 (id int primary key not null auto_increment, imie varchar(20) not null, nazwisko varchar(30) not null, pesel char(11));

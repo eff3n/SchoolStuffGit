@@ -1,0 +1,1 @@
+﻿update pracownicy set nazwisko='Andrzejewski', placa=3440.00, stanowisko='kierownik' where id=8;

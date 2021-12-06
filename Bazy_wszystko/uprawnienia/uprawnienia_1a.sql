@@ -1,0 +1,1 @@
+﻿grant all on baza_komp22 to komp22 identified by 'baza1';

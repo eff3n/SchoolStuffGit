@@ -1,0 +1,1 @@
+﻿insert into osoby3 set id=6, imie='Marek6', nazwisko='Klon6', pesel='78945612396';

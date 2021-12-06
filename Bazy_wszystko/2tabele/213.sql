@@ -1,0 +1,1 @@
+﻿create index id_tabela2 on tabela2 (id);

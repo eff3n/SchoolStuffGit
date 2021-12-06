@@ -1,0 +1,1 @@
+create table tab22 (id integer, nazwa int); 

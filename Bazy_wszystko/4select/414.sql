@@ -1,0 +1,1 @@
+﻿select id, imie, nazwisko from pracownicy where pesel is null;

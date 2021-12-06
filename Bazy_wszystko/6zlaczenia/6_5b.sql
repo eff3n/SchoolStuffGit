@@ -1,0 +1,1 @@
+﻿select pracownicy.imie, pracownicy.nazwisko, stanowiska.nazwa, pracownicy.placa from pracownicy, stanowiska;

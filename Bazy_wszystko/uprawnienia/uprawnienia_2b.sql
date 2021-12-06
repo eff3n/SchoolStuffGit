@@ -1,0 +1,1 @@
+﻿grant select, insert, update, delete on table pracownicy to konto1;

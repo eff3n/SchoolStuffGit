@@ -1,0 +1,1 @@
+﻿insert into osoby values (2, 'Franek', 'Jodła', '78945612396');

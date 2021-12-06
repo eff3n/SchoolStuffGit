@@ -1,0 +1,1 @@
+﻿delete from pracownicy where nazwisko='Arkuszewski' or nazwisko='Boroeski';

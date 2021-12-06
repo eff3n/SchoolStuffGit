@@ -1,0 +1,1 @@
+﻿revoke select on table pracownicy from konto1;

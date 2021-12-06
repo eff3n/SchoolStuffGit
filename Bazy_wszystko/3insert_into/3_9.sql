@@ -1,0 +1,1 @@
+﻿insert into osoby (id, imie, nazwisko) values (66, 'Marek66', 'Klon66'), (77, 'Marek77', 'Klon7'), (88, 'Marek88', 'Klon88');

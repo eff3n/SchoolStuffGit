@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+}
+#banner {
+    background-color: #9A6000;
+    color: white;
+    font-size: 180%;
+    text-align: center;
+    padding: 20px;
+}
+#left {
+    float: left;
+    width: 60%;
+}
+#right {
+    float: right;
+    width: 40%;
+    background-color: #C47A00;
+    color: white;
+    min-height:calc(100vh - 89px);
+}
+h3 {
+    text-align: center;
+}
+ul {
+    margin: 10px;
+}

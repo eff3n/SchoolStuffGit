@@ -1,0 +1,27 @@
+Zadanie 1.1:
+CREATE USER Surowka_Michal_4Ti Identified by 'spr1'
+
+Zadanie 1.2:
+create database baza_spr_uprawnienia
+
+Zadanie 1.4:
+grant select, insert, drop, update, alter, delete on baza_spr_uprawnienia.stanowiska to 'Surowka_Michal_4Ti'@'localhost' 
+
+Zadanie 1.5:
+revoke select on baza_spr_uprawnienia.stanowiska from 'Surowka_Michal_4Ti'@'localhost' 
+
+
+Zadanie 2.1:
+create database baza_spr_podz
+
+Zadanie 2.3:
+SELECT klient.imie, klient.nazwisko, kurs.nazwaWaluty, kurs.kurs, kurs.dataKursu, wymiana.ile
+    FROM wymiana INNER JOIN kurs 
+        ON wymiana.kursId=kurs.id 
+    INNER JOIN klient
+        ON klient.id=wymiana.klientId
+    WHERE wymiana.ile <= (SELECT AVG(wymiana.ile) FROM wymiana JOIN kurs as kurs2
+                                                        ON kurs2.id=wymiana.kursId
+                              WHERE kurs.id=kurs2.id)
+
+

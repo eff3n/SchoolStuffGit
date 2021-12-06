@@ -1,0 +1,86 @@
+/////////KWERENDA A
+
+
+SELECT
+filmy.Tytul,
+filmy.Gatunek
+FROM
+filmy
+WHERE
+filmy.Gatunek='SF';
+
+
+/////////KWERENDA B WHERE
+
+
+SELECT
+filmy.Tytul,
+rezyserzy.Nazwisko
+FROM
+rezyserzy, filmy
+WHERE 
+filmy.RezyserID=rezyserzy.IDRezyser;
+
+
+/////////KWERENDA B INNER JOIN
+
+
+SELECT
+filmy.Tytul,
+rezyserzy.Nazwisko
+FROM
+filmy INNER JOIN rezyserzy
+ON 
+filmy.RezyserID=rezyserzy.IDRezyser;
+
+
+/////////KWERENDA C WHERE
+
+
+SELECT
+filmy.Tytul,
+recenzje.Recenzent
+FROM
+filmy, recenzje
+WHERE
+filmy.RecenzjaID=recenzje.IDRecenzja AND recenzje.Ocena=4;
+
+
+/////////KWERENDA C INNER JOIN
+
+
+SELECT
+filmy.Tytul,
+recenzje.Recenzent
+FROM
+filmy INNER JOIN recenzje
+ON
+filmy.RecenzjaID=recenzje.IDRecenzja 
+WHERE recenzje.Ocena=4;
+
+
+/////////KWERENDA D WHERE
+
+
+SELECT
+filmy.Tytul,
+rezyserzy.Nazwisko
+FROM
+filmy, recenzje, rezyserzy
+WHERE 
+filmy.RezyserID=rezyserzy.IDRezyser AND filmy.RecenzjaID=recenzje.IDRecenzja AND recenzje.Tresc='Ciekawy';
+
+
+/////////KWERENDA D INNER JOIN
+
+
+SELECT
+filmy.Tytul,
+rezyserzy.Nazwisko
+FROM
+filmy INNER JOIN rezyserzy
+ON 
+filmy.RezyserID=rezyserzy.IDRezyser
+INNER JOIN recenzje 
+ON filmy.RecenzjaID=recenzje.IDRecenzja 
+WHERE recenzje.Tresc='Ciekawy';

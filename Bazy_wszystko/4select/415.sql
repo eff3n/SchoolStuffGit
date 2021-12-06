@@ -1,0 +1,1 @@
+﻿select * from pracownicy where placa > 1400 and stanowisko <> 'kierownik' and pesel is not null;

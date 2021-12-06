@@ -1,0 +1,1 @@
+﻿alter table osoby add pesel varchar(11);

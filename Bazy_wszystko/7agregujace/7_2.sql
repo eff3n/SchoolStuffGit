@@ -1,0 +1,1 @@
+﻿select count(pesel) from pracownicy;

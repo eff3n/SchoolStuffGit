@@ -1,0 +1,1 @@
+﻿alter table osoby alter column imie set default 'nieznane imie';

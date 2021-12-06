@@ -1,0 +1,1 @@
+﻿create table tabela3 (id int, imie varchar(11), nazwisko varchar(11));

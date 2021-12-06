@@ -1,0 +1,1 @@
+﻿insert into osoby (id, imie, nazwisko, pesel) values (1, 'Marek', 'Klon', '78945612396');

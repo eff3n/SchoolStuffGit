@@ -1,0 +1,1 @@
+﻿select * from pracownicy order by nazwisko desc;
