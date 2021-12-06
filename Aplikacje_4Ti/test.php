@@ -13,7 +13,7 @@
         $q1=mysqli_query($conn,"SELECT * FROM lokalizacja");
         echo "<table>";
         while($table=mysqli_fetch_assoc($q1)){
-            echo "<tr><td>".$table['id']."</td><td>".$table['Nazwa']."</td><td>".$table['Adres']."</td>";
+            echo "<tr><td>".$table['id']."</td><td>".$table['Nazwa']."</td><td>".$table['Adres']."</td></tr>";
         }
         echo "</table>"
         ?>
