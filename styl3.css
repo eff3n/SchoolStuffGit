@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+}
+main{
+    display: flex;
+}
+#logo{
+    background-color: #FF7F50;
+    width: 25%;
+    height: 100px;
+}
+#baner{
+    background-color: #FF7F50;
+    text-align: center;
+    width: 75%;
+    height: 100px;
+    font-size: 130%;
+    line-height: 100px;
+}
+menu{
+    background-color: #FF7F50;
+    padding: 70px;
+}
+#strefa_obliczen{
+    width: 40%;
+    height: 400px;
+}
+#zdjecie{
+    width: 60%;
+    height: 400px;
+    text-align: right;
+}
+footer{
+    background-color: #FF7F50;
+    padding: 20px;
+}
+body{
+    font-family: Georgia;
+    background-color: #FFFAFA;
+}
+form{
+    margin: 80px;
+}
+table{
+    color: #FFF;
+    text-align: center;
+    width: 80%;
+    border: 1px dotted white;
+}
+tr:hover{
+    background-color: #D3D3D3;
+    color: #000;
+}
