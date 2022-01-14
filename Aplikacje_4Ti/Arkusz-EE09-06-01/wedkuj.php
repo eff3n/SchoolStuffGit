@@ -17,7 +17,7 @@
                 $conn = mysqli_connect('localhost','root','','wedkowanie');
                 $query = mysqli_query($conn, "SELECT nazwa, wystepowanie FROM Ryby WHERE styl_zycia=1;");
                 while($assoc=mysqli_fetch_assoc($query)){
-                    echo "<li>".$assoc['nazwa']." wystepowanie: ".$assoc['wystepowanie']."</li>";
+                    echo "<li>".$assoc['nazwa'].", wystepowanie: ".$assoc['wystepowanie']."</li>";
                 }
                 mysqli_close($conn);
                 ?>
