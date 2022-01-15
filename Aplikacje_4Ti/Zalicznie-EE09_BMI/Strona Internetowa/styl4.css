@@ -1,0 +1,54 @@
+body {
+    font-family: Helvetica;
+    background-color: #FFE4B5;
+}
+#banner {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    width: 75%;
+    height: 100px;
+    font-size: 150%;
+    float: left;
+}
+#logo {
+    width: 25%;
+    height: 100px;
+    float: left;
+}
+#left {
+    width: 45%;
+    height: 300px;
+    float: left;
+}
+#right {
+    width: 55%;
+    height: 300px;
+    float: left;
+    text-align: center;
+}
+#main {
+    background-color: #4B0082;
+    padding: 60px;
+    float: left;
+    width: 100%;
+}
+footer {
+    background-color: #4B0082;
+    padding: 40px;
+    float: left;
+    width: 100%
+}
+form {
+    margin: 40px;
+}
+table {
+    color: white;
+    text-align: center;
+    width: 90%;
+    border: 1px dashed yellow
+}
+tr:hover{
+    background-color: #9370DB;
+    color: yellow;
+}

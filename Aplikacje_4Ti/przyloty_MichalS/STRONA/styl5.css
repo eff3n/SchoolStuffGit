@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+#firstbanner, #thirdbanner {
+    width: 25%;
+    height: 200px;
+}
+#firstbanner, #secondbanner {float: left;}
+#thirdbanner {float: right;}
+#secondbanner {
+    width: 50%;
+    height: 200px;
+    font-size: 250%;
+    text-align: center;
+}
+main {
+    background-color: rgb(0,0,128);
+    padding: 60px;
+    text-transform: capitalize;
+    float: left;
+    width: 100%;
+}
+#firstfooter {
+    text-align:center;
+    float: left;
+}
+#secondfooter {
+    float: right;
+    width: 50%;
+    padding-top: 100px;
+    text-align: right;
+}
+body {
+    font-family: Garamond;
+    background-color: rgb(30,144,255);
+    color: white;
+}
+p {
+    padding: 20px;
+    font-size: 200%;
+    border: 1px solid rgb(192,192,192);
+}
+p:hover{
+    background-color: rgb(192,192,192);
+}
+table {
+    width: 100%;
+    border-collapse:collapse;
+}
+td, tr {
+    border: 1px solid rgb(192,192,192);
+    padding: 10px;
+}
