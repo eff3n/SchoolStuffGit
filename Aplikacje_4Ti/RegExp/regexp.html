@@ -4,8 +4,15 @@
         function check(){
             var string = document.getElementById("string").value;
             var email = document.getElementById("email").value;
+<<<<<<< Updated upstream
             let check = new RegExp('^[0-9]{3}-[0-9]{3}-[0-9]{3}$');
             let checkmail = new RegExp('^[a-z A-Z 0-9]{2,}@[a-z A-Z 0-9]{2,}.[a-z A-Z]{2,}$');
+=======
+            var pass = document.getElementById("pass").value;
+            let check = /^[0-9]{3}-[0-9]{3}-[0-9]{3}$/
+            let checknumber = /\d/; //decimal
+            let checkmail = new RegExp('^[a-z A-Z 0-9 .]{2,}@[a-z A-Z 0-9]{2,}.[a-z A-Z]{2,}$');
+>>>>>>> Stashed changes
             if(check.test(string)==true) {
                 document.getElementById("result").innerHTML = "Poprawnie";
                 document.getElementById("result").style.backgroundColor = "blue";
