@@ -1,0 +1,7 @@
+INSERT INTO `ratownicy`(`nrKaretki`, `ratownik1`, `ratownik2`, `ratownik3`) VALUES ('20','Adam Nowak','Jan Kowalski','Anna Nowakowska')
+
+SELECT `id`, `ratownicy_id`, `adres` FROM `zgloszenia` WHERE dyspozytorzy_id=4
+
+create user adam identified by 'Adam6&';
+
+grant create, alter, drop on zgloszenia.ratownicy to 'adam';

@@ -1,0 +1,45 @@
+* {
+    font-family: Verdana;
+}
+#banner_left, #banner_right {
+    float: left;
+    background-color: #29434E;
+    height: 70px;
+}
+#banner_left {
+    color: white;
+    text-align: center;
+    width: 70%;
+}
+#banner_right{
+    width: 30%;
+    color: white;
+}
+#polecamy, #fantastyczne {
+    overflow-y:auto;
+    overflow-x:hidden;
+    background-color: #B0BEC5;
+    height: 320px;
+    clear: both;
+    
+}
+span {
+    padding: 5px;
+    width: 226px;
+    height: 280px;
+    float: left;
+}
+h3 {
+    background-color: #546E7A;
+    color: white;
+    margin: 0;
+}
+h4 {
+    text-align: center;
+    margin: 0;
+}
+footer {
+    background-color: #29434E;
+    color:white;
+    clear: both;
+}

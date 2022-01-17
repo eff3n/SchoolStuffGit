@@ -1,0 +1,7 @@
+SELECT `id`, `nazwa`, `opis`, `zdjecie` FROM `produkty` WHERE id IN (18,22,23,25);
+
+SELECT `id`, `nazwa`, `opis`, `zdjecie` FROM `produkty` WHERE Rodzaje_id=12
+
+select produkty.nazwa, rodzaje.nazwa from produkty inner join rodzaje on rodzaje.id=produkty.Rodzaje_id where opis like "%Leia%";
+
+DELETE FROM `produkty` WHERE id=15
