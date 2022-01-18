@@ -53,7 +53,7 @@
                         $query3 = mysqli_query($conn2, "SELECT login, rok_urodz, przyjaciol, hobby, zdjecie from uzytkownicy inner join dane on dane.id=uzytkownicy.id WHERE login='$login'");
                         while($assoc2=mysqli_fetch_assoc($query3)) { 
                                     echo "<div><img src=./pliki5/".$assoc2['zdjecie']." alt=osoba /><br />";
-                                    echo "<h4>".$assoc2['login'].", ".date('Y')-$assoc2['rok_urodz']."</h4><br />";  
+                                    echo "<h4>".$assoc2['login']." (".date('Y')-$assoc2['rok_urodz'].")</h4>";  
                                     echo "<p>".$assoc2['hobby']."</p><br />";
                                     echo "<h1><img src=./pliki5/icon-on.png alt=serce /> ".$assoc2['przyjaciol']."</h1><br />";
                                     echo "<a href=dane.html>Więcej informacji</a></div>";

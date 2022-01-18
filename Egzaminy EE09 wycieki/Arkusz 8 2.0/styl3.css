@@ -1,0 +1,43 @@
+* {
+    font-family: Verdana;
+}
+#header_left {
+    background-color: #29434E;
+    color: white;
+    text-align: center;
+    width: 70%;
+    height: 70px;
+    float: left;
+}
+#header_right {
+    background-color: #29434E;
+    color: white;
+    height: 70px;
+    width: 30%;
+    float: left;
+}
+#polecamy, #fantastyczne{
+    background-color: #B0BEC5;
+    height: 320px;
+    overflow:scroll;
+    clear: both;
+}
+footer {
+    background-color: #29434E;
+    color: white;
+}
+span {
+    padding: 5px;
+    width: 226px;
+    height: 280px;
+    float: left;
+}
+h3 {
+    background-color: #546E7A;
+    color: white;
+    margin: 0;
+}
+h4 {
+    text-align: center;
+    margin: 0;
+}
