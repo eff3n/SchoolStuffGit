@@ -1,0 +1,38 @@
+* {
+    font-family: Arial;
+}
+header, footer {
+    background-color: saddlebrown;
+    color: white;
+    height: 100px;
+    clear: both;
+}
+#left_banner, #left_footer {
+    width: 55%;
+    font-size: 120%;
+    float: left;
+}
+#middle_footer, #middle_banner {
+    width: 25%;
+    float: left
+}
+#right_banner, #right_footer{
+    width: 20%;
+    text-align: right;
+    float: left;
+}
+main{
+    background-color: snow;
+    padding: 70px;
+    clear: both;
+}
+a {
+    border: 2px dotted saddlebrown;
+    background-color: snow;
+    color: saddlebrown;
+    padding: 20px;
+    line-height: 100px;
+}
+ol {
+    list-style: lower-latin;
+}
