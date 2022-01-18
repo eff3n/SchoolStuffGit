@@ -1,0 +1,4 @@
+create table uzytkownicy(id int AUTO_INCREMENT NOT NULL PRIMARY KEY, login varchar(50), haslo varchar(50));
+INSERT INTO `uzytkownicy`(`login`, `haslo`) VALUES ('Grzegorz','g');
+SELECT login FROM `uzytkownicy`;
+SELECT id, login FROM `uzytkownicy` WHERE haslo LIKE "4%";
