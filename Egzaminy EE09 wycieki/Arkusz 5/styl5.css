@@ -1,0 +1,53 @@
+* {
+    font-family: Tahoma;
+}
+header > section {
+    background-color: #003d33;
+    color: white;
+    text-align: center;
+    height: 50px;
+    float: left;
+}
+#header_left {
+    width: 70%;
+}
+#header_right {
+    width: 30%
+}
+#main_left, #main_right {
+    background-color: #26a69a;
+    height: 550px;
+    float: left
+}
+#main_left {
+    width: 30%;
+}
+#main_right {
+    width: 70%;
+}
+footer {
+    background-color: #003d33;
+    color: white;
+    clear: both;
+}
+div {
+    background-color: #003d33;
+    width: 400px;
+    margin: 30px;
+    text-align: center;
+    border: 1px solid #003d33;
+    clear: both;
+}
+div > input{
+    width: 100%;
+    height: 30px;
+    background-color: #003d33;
+    color: white;
+    border: none;
+}
+div > input:hover {
+    background-color: #004c40;
+}
+p::before {
+    content: "hobby: ";
+}

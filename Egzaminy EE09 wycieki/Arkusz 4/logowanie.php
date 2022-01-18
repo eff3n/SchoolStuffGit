@@ -33,9 +33,12 @@
                 if($login == "" || $pass1 == "" || $pass2 == ""){
                     echo "<p>wypełnij wszystkie pola</p>";
                 } else {
+                    $exists = 0;
                     $check = mysqli_query($conn,"SELECT login FROM uzytkownicy");
-                    $assoc = mysqli_fetch_assoc($check);
-                        if($login=$assoc['login']) {
+                    while($assoc = mysqli_fetch_assoc($check)){
+                        if($assoc['login']==$login){$exists=1;} 
+                    }
+                        if($exists == 1) {
                         echo "<p>login występuje w bazie, konto nie zostało dodane</p>";
                     } else if($pass1 != $pass2){
                         echo "<p>hasła nie są takie same, konto nie zostało dodane</p>";

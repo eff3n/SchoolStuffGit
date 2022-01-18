@@ -1,0 +1,7 @@
+select haslo from uzytkownicy WHERE login='Justyna';
+
+SELECT COUNT(*) as liczba_wierszy from dane
+
+select login, rok_urodz, przyjaciol, hobby, zdjecie from uzytkownicy inner join dane on dane.id=uzytkownicy.id WHERE login='Justyna'
+
+alter table dane add column stanowisko text;
