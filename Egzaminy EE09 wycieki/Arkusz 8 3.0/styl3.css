@@ -1,0 +1,41 @@
+* {
+    font-family: Verdana;
+}
+header > section {
+    background-color: #29434E;
+    color: white;
+    height: 70px;
+    float: left;
+}
+#header_left {
+    width: 70%;
+    text-align: center;
+}
+#header_right {
+    width: 30%;
+}
+footer {
+    background-color: #29434E;
+    color: white;
+}
+span {
+    padding: 5px;
+    width: 226px;
+    height: 280px;
+    float: left;
+}
+h3 {
+    background-color: #546E7A;
+    color: white;
+    margin: 0;
+}
+h4 {
+    text-align: center;
+    margin: 0;
+}
+main > section {
+    background-color: #B0BEC5;
+    height: 320px;
+    overflow: scroll;
+    clear: both;
+}
