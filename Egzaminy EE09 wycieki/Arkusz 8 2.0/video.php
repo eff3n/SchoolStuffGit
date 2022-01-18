@@ -56,14 +56,14 @@
         </section>
     </main>
     <footer>
-        <form>
-            Usuń film nr: <input type="number" name="number" /> <input type="submit" name="submit" /> 
+        <form method="POST"> 
+            Usuń film nr: <input type="number" name="number" /> <input type="submit" name="submit" value="usun"/> 
         </form> <br />
         <?php 
         $conn3 = mysqli_connect('localhost','root','','dane3');
         if(isset($_POST['submit'])){
             $number = $_POST['number'];
-            mysqli_query($conn3,"DELETE FROM `produkty` WHERE id='$number'");
+            $query3 = mysqli_query($conn3,"DELETE FROM `produkty` WHERE id=$number");
         }
         mysqli_close($conn3);
         ?>

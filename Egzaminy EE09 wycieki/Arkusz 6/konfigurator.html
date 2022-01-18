@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurator stylu</title>
+    <link rel="Stylesheet" href="styl6.css" />
+    <script>
+        function Indigo(){
+            document.getElementById("right").style.backgroundColor = "Indigo";
+        }
+        function Steelblue(){
+            document.getElementById("right").style.backgroundColor = "Steelblue";
+        }
+        function Olive(){
+            document.getElementById("right").style.backgroundColor = "Olive";
+        }
+        function selector(){
+            var select = document.getElementById("select").value;
+            console.log(typeof(select));
+            switch(select){
+            case "1":  document.getElementById("right").style.color = "white"; break;
+            case "2":  document.getElementById("right").style.color = "tan"; break;
+            case "3":  document.getElementById("right").style.color = "bisque"; break;
+            case "4":  document.getElementById("right").style.color = "plum"; break;
+            }
+        }
+        function font(){
+            var font = document.getElementById("font").value;
+            console.log(font);
+            document.getElementById("right").style.fontSize = font;
+        }
+        function check(){
+            if(document.getElementById("border").checked){
+                document.getElementById("image").style.borderWidth = 1 + "px";
+            } else document.getElementById("image").style.borderWidth = 0 + "px";
+        }
+        function wypisz(){
+            if(document.getElementById("dysk").checked){
+                document.getElementById("lista").style.listStyle = "disc";
+            } else 
+            if(document.getElementById("kwadrat").checked){
+                document.getElementById("lista").style.listStyle = "square";
+            } else 
+            if(document.getElementById("okrag").checked){
+                document.getElementById("lista").style.listStyle = "circle";
+            }
+        }
+    </script>
+</head>
+<body>
+    <section id="left">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p><br />
+        <button onclick="Indigo()" id="Indigo">Indigo</button>
+        <button onclick="Steelblue()" id="Steelblue">Steelblue</button>
+        <button onclick="Olive()" id="Olive">Olive</button> <br />
+        <p>Podaj kolor czcionki</p>
+        <select id="select" onchange="selector()">
+            <option value="1" id="white">White</option>
+            <option value="2" id="tan">Tan</option>
+            <option value="3" id="bisque">Bisque</option>
+            <option value="4" id="plum">Plum</option>
+        </select><br />
+        <p>Podaj rozmiar czcionki</p><br /><input type="text" id="font" value="100%" onchange="font()"/><br />
+        <p>Czy rysunek ma mieć ramkę?</p><br /><input type="checkbox" id="border" onchange="check()" checked value="Rysuj ramkę" />
+        <p>Jaki jest typ punktora listy?</p><br />
+        <form id="list" onchange="wypisz()">
+            <div>
+                <input type="radio" id="dysk" checked value="dysk" name="list"/><label for="dysk">dysk</label>
+                <input type="radio" id="kwadrat" value="kwadrat" name="list"/><label for="kwadrat">kwadrat</label>
+                <input type="radio" id="okrag" value="okrag" name="list"/><label for="okrag">okrąg</label>
+            </div>
+        </form>
+    </section>
+    <section id="right">
+        <img src="./pliki6/gibraltar.jpg" alt="półwysep Gibraltar" id="image"/>
+        <ul id="lista">
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </section>
+    <footer>
+        Autor: 0000000000
+    </footer>
+</body>
+</html>
